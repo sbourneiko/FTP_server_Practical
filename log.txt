@@ -1,0 +1,191 @@
+ѕрослушиваем порт 6666
+request: tendx=login1234=password\=cur_dir0=file_sizehelp
+response: bad request
+request: tendx=login1234=password\=cur_dir0=file_sizecd
+response: \
+request: tendx=login1234=password\=cur_dir0=file_sizemkdir test
+response: successfully
+request: tendx=login1234=password\=cur_dir0=file_sizermtree test
+response: successfully
+request: tendx=login1234=password\=cur_dir0=file_sizetouch test
+response: successfully
+request: tendx=login1234=password\=cur_dir0=file_sizeremove test
+response: successfully
+request: tendx=login1234=password\=cur_dir0=file_sizetouch file.txt
+response: successfully
+request: tendx=login1234=password\=cur_dir0=file_sizeremove file
+response: Invalid path
+request: tendx=login1234=password\=cur_dir0=file_sizeremove file.txt
+response: successfully
+request: tendx=login1234=password\=cur_dir0=file_sizemkdir test
+response: successfully
+request: tendx=login1234=password\=cur_dir0=file_sizecd test
+response: \test\
+request: tendx=login1234=password\test\=cur_dir0=file_sizetouch file
+response: successfully
+request: tendx=login1234=password\test\=cur_dir0=file_sizels
+response: file
+request: tendx=login1234=password\test\=cur_dir0=file_sizetouch file1
+response: successfully
+request: tendx=login1234=password\test\=cur_dir0=file_sizels
+response: file
+
+file1
+request: tendx=login1234=password\test\=cur_dir0=file_sizecd /
+
+response: \
+request: tendx=login1234=password\=cur_dir0=file_sizermtree test
+response: successfully
+request: tendx=login1234=password\=cur_dir0=file_sizeget_file test
+Has been sent
+response: b'Invalid path$FAILED$'
+ѕрослушиваем порт 6666
+request: tendx=login1234=password\=cur_dir0=file_sizemkdir test
+response: successfully
+request: tendx=login1234=password\=cur_dir0=file_sizeget_file test
+Has been sent
+response: b'Permission denied$FAILED$'
+request: admin=loginadmin=password\=cur_dir0=file_sizetouch file.txt
+response: successfully
+request: admin=loginadmin=password\=cur_dir0=file_sizeget_file file.txt
+Has been sent
+response: b'$$STREAM_FILE_END_FLAG$$'
+request: admin=loginadmin=password\=cur_dir0=file_sizesend_file file.txt
+Has been received
+response: uploaded successfully
+ѕрослушиваем порт 6666
+request: test=logintest=password\=cur_dir0=file_sizemkdir test1
+response: successfully
+request: test=logintest=password\=cur_dir0=file_sizecd ...../test1
+response: \
+request: test=logintest=password\=cur_dir0=file_sizecd ./test1
+response: \test1\
+request: test=logintest=password\test1\=cur_dir0=file_sizemkdir ../test1/test11
+response: successfully
+request: test=logintest=password\test1\=cur_dir0=file_sizels
+response: test11
+request: test=logintest=password\test1\=cur_dir0=file_sizepwd
+response: \test1\
+request: test=logintest=password\test1\=cur_dir0=file_sizermtree test11
+response: successfully
+request: test=logintest=password\test1\=cur_dir0=file_sizels
+response: 
+request: test=logintest=password\test1\=cur_dir0=file_sizetouch 1.txt
+response: successfully
+request: test=logintest=password\test1\=cur_dir0=file_sizerename 1.txt 11.txt
+response: successfully
+request: test=logintest=password\test1\=cur_dir0=file_sizels
+response: 11.txt
+request: test=logintest=password\test1\=cur_dir0=file_sizeremove 1.txt
+response: Invalid path
+request: test=logintest=password\test1\=cur_dir0=file_sizecat 1.txt
+response: Invalid path
+request: test=logintest=password\test1\=cur_dir0=file_sizecat 11.txt
+response: 
+request: test=logintest=password\test1\=cur_dir0=file_sizecd ////
+
+response: \
+request: test=logintest=password\=cur_dir0=file_sizepwd
+response: \
+request: test=logintest=password\=cur_dir0=file_sizecd \
+
+response: \
+request: test=logintest=password\=cur_dir0=file_sizepwd
+response: \
+request: test=logintest=password\=cur_dir0=file_sizermtree test1
+response: successfully
+request: test=logintest=password\=cur_dir0=file_sizels
+response: 
+ѕрослушиваем порт 6161
+ѕрослушиваем порт 6161
+request: tendx=login1234=password\=cur_dir0=file_sizehelp
+response: pwd - показывает название рабочей директории
+ls - показывает содержимое текущей директории
+cd <path> - перемещение по директори€м
+ѕрослушиваем порт 6161
+request: tendx=login1234=password\=cur_dir0=file_sizehelp
+
+response: help - показывает все возможные команды
+pwd - показывает название рабочей директории
+ls - показывает содержимое текущей директории
+cd <path> - перемещение по директори€м
+mkdir <dirname> - создать директорию (рекурсивно)
+rmtree <dirname> - удалить директорию (рекурсивно)
+touch <filename> - создать пустой файл
+remove <filename> - удалить файл
+cat <filename> - отправл€ет содержимое файла
+get_file <filename> - отправл€ет файл в текущую директорию у клиента
+send_file <filename> - принимает файл с текущей директории клиента
+exit - отключение клиента от сервера
+ѕрослушиваем порт 6666
+request: sofya=loginqwerty=password\=cur_dir0=file_sizehelp
+response: help - показывает все возможные команды
+pwd - показывает название рабочей директории
+ls - показывает содержимое текущей директории
+cd <path> - перемещение по директори€м
+mkdir <dirname> - создать директорию (рекурсивно)
+rmtree <dirname> - удалить директорию (рекурсивно)
+touch <filename> - создать пустой файл
+remove <filename> - удалить файл
+cat <filename> - отправл€ет содержимое файла
+send_file <filename> - отправл€ет файл в текущую директорию у клиента
+get_file <filename> - принимает файл с текущей директории клиента
+exit - отключение клиента от сервера 
+request: sofya=loginqwerty=password\=cur_dir0=file_sizepwd
+response: \
+request: sofya=loginqwerty=password\=cur_dir0=file_sizecd ..
+response: \
+request: sofya=loginqwerty=password\=cur_dir0=file_sizepwd
+response: \
+request: sofya=loginqwerty=password\=cur_dir0=file_sizetouch 2.txt
+response: successfully
+request: sofya=loginqwerty=password\=cur_dir0=file_sizels
+response: 2.txt
+request: sofya=loginqwerty=password\=cur_dir0=file_sizetouch touch_file.txt
+response: successfully
+request: sofya=loginqwerty=password\=cur_dir0=file_sizels
+response: 2.txt
+
+touch_file.txt
+request: sofya=loginqwerty=password\=cur_dir0=file_sizemkdir test1
+response: successfully
+request: sofya=loginqwerty=password\=cur_dir0=file_sizecd ...../test1
+response: \
+request: sofya=loginqwerty=password\=cur_dir0=file_sizecd ./test1
+response: \test1\
+request: sofya=loginqwerty=password\test1\=cur_dir0=file_sizemkdir ../test1/test11
+response: successfully
+request: sofya=loginqwerty=password\test1\=cur_dir0=file_sizels
+response: test11
+request: sofya=loginqwerty=password\test1\=cur_dir0=file_sizepwd
+response: \test1\
+request: sofya=loginqwerty=password\test1\=cur_dir0=file_sizermtree test11
+response: successfully
+request: sofya=loginqwerty=password\test1\=cur_dir0=file_sizels
+response: 
+request: sofya=loginqwerty=password\test1\=cur_dir0=file_sizetouch 1.txt
+response: successfully
+request: sofya=loginqwerty=password\test1\=cur_dir0=file_sizerename 1.txt 11.txt
+response: successfully
+request: sofya=loginqwerty=password\test1\=cur_dir0=file_sizels
+response: 11.txt
+request: sofya=loginqwerty=password\test1\=cur_dir0=file_sizeremove 1.txt
+response: Invalid path
+request: sofya=loginqwerty=password\test1\=cur_dir0=file_sizecat 1.txt
+response: Invalid path
+request: sofya=loginqwerty=password\test1\=cur_dir0=file_sizecat 11.txt
+response: 
+request: sofya=loginqwerty=password\test1\=cur_dir0=file_sizecd ////
+
+response: \
+request: sofya=loginqwerty=password\=cur_dir0=file_sizepwd
+response: \
+request: sofya=loginqwerty=password\=cur_dir0=file_sizecd \
+
+response: \
+request: sofya=loginqwerty=password\=cur_dir0=file_sizepwd
+response: \
+request: sofya=loginqwerty=password\=cur_dir0=file_sizermtree test1
+response: successfully
+request: sofya=loginqwerty=password\=cur_dir0=file_sizels
+response: touch_file.txt
